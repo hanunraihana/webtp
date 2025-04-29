@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Tamu Teknik Pemesinan - SMK Negeri 2 Yogyakarta</title>
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #f1f5f9;
+      --accent-color: #3b82f6;
+      --text-color: #333;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: grey;
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #0d2a79, #fd0202);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeDown 1.5s ease-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    main {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 30px 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeUp 1.2s ease-out;
+    }
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      animation: fadeUp 2s ease-out;
+    }
+    /* Animasi */
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    /* Buku Tamu */
+    .buku-tamu {
+      background-color: #f9f1f1;
+      padding: 50px 20px;
+      text-align: center;
+      border-top: 3px solid #df3232;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      box-shadow: 0 0 20px 0 rgba(3, 8, 26, 0.7);
+      border-radius: 35px;
+      margin: 30px auto 0;
+      max-width: 1000px;
+      width: 90%;
+      transition: background-color 0.3s ease;
+    }
+    .buku-tamu form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .buku-tamu input,
+    .buku-tamu textarea {
+      padding: 12px;
+      font-size: 18px;
+      border: 2px solid #df3232;
+      border-radius: 10px;
+      outline: none;
+    }
+    .buku-tamu button {
+      background-color: #df3232;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .buku-tamu button:hover {
+      background-color: #b71c1c;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+    .navigasi {
+    margin-top: 40px;
+    display: flex;          
+    justify-content: center; /* biar tombol ada di tengah */
+    gap: 20px;               /* Jarak antar tombol */
+    flex-wrap: wrap;        
+    }
+    .navigasi a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: rgb(86, 148, 240); 
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    }
+    .navigasi a:hover {
+    transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Buku Tamu Teknik Pemesinan</h1>
+  <p>SMK Negeri 2 Yogyakarta</p>
+</header>
+
+<main>
+  <section class="buku-tamu">
+    <h2>Isi Buku Tamu</h2>
+    <form action="thankyou.html" method="POST">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="asal">Asal Sekolah / Kelas:</label>
+      <input type="text" id="asal" name="asal" required>
+
+      <label for="pesan">Kesan & Pesan:</label>
+      <textarea id="pesan" name="pesan" rows="4" required></textarea>
+      <button type="submit"><a href="thankyou.html">Submit</a></button>
+    </form>
+  </section>
+</main>
+<div class="navigasi">
+  <a href="index.html">← Kembali ke Beranda</a>
+</div>
+<footer>
+  &copy; by hanunr.r 2025 Teknik Pemesinan - SMK Negeri 2 Yogyakarta.
+</footer>
+
+</body>
+</html>
